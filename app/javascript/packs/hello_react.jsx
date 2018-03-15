@@ -10,7 +10,7 @@ import { Provider } from "react-redux";
 
 import reducer from "../reducers/index";
 
-import { watcherSaga } from "../sagas/sagas";
+import watcherSaga from "../sagas/sagas";
 
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware();

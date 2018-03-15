@@ -2,7 +2,8 @@ import { takeLatest, call, put } from "redux-saga/effects";
 import axios from "axios";
 
 // watcher saga: watches for actions dispatched to the store, starts worker saga
-export function* watcherSaga() {
+export default function* watcherSaga() {
+  console.log("WATCHER SAGA");
   yield takeLatest("DOG_API_CALL_REQUEST", workerDogSaga);
   yield takeLatest("CAT_API_CALL_REQUEST", workerCatSaga);
 }
