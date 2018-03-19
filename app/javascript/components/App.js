@@ -13,13 +13,13 @@ export default class App extends Component {
       error
     } = this.props;
 
+    console.log("ANY CHANGE");
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={dog || cat || logo} className="App-logo" alt="logo" />
+        <header>
+          {" "}
           <h1 className="App-title">Welcome to Dog and Cat Saga</h1>
         </header>
-
         {dog ? (
           <p className="App-intro">Keep clicking for new dogs</p>
         ) : (
@@ -40,6 +40,10 @@ export default class App extends Component {
             <button onClick={onRequestCat}>Request a Cat</button>
           </div>
         )}
+
+        <footer className="App-header">
+          <img src={dog || cat || logo} className="App-logo" alt="logo" />
+        </footer>
 
         {error && <p style={{ color: "red" }}>Uh oh - something went wrong!</p>}
       </div>

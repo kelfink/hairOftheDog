@@ -7,10 +7,10 @@ import { connect } from "react-redux";
 
 const mapStateToProps = state => {
   return {
-    fetching: state.fetching,
-    dog: state.dog,
-    cat: state.cat,
-    error: state.error
+    fetching: state.cats.fetching || state.dogs.fetching,
+    dog: state.dogs.dog,
+    cat: state.cats.cat,
+    error: state.cats.error || state.cats.error
   };
 };
 
