@@ -5,12 +5,13 @@
       {
         "modules": false,
         "targets": {
-          "browsers": "> 1%",
+          "browsers": ["last 2 versions", "safari >=7"],
           "uglify": true
         },
         "useBuiltIns": true
       }
     ],
+    "es2015",
     "react"
   ],
   "plugins": [
@@ -21,6 +22,9 @@
       {
         "spec": true
       }
-    ]
+    ],
+    "transform-regenerator",
+    ["transform-runtime", { "polyfill": false, "regenerator": true }],
+    "array-includes"
   ]
 }
