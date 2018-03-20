@@ -1,21 +1,16 @@
-// action types
-const DOG_API_CALL_REQUEST = "DOG_API_CALL_REQUEST";
-const DOG_API_CALL_SUCCESS = "DOG_API_CALL_SUCCESS";
-const DOG_API_CALL_FAILURE = "DOG_API_CALL_FAILURE";
+import {
+  DOG_API_CALL_REQUEST,
+  DOG_API_CALL_SUCCESS,
+  DOG_API_CALL_FAILURE
+} from "../constants/actionTypes";
 
-const initialState = {
-  fetching: false,
-  dog: null,
-  cat: null,
-  error: null
-};
-
-export default function dogs(state = initialState, action) {
+function dogs(state = { dog: null, error: null, fetching: false }, action) {
   switch (action.type) {
     case DOG_API_CALL_REQUEST:
       return { ...state, fetching: true, error: null };
       break;
     case DOG_API_CALL_SUCCESS:
+      console.log("HELLO DOGS SUCCESS ", action);
       return { ...state, fetching: false, dog: action.dog, cat: null };
       break;
     case DOG_API_CALL_FAILURE:

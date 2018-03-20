@@ -1,15 +1,11 @@
 import { combineReducers } from "redux";
-// import todos from './todos'
-// import counter from './counter'
+import { DOG_API_CALL_REQUEST } from "../constants/actionTypes";
+import { DOG_API_CALL_SUCCESS } from "../constants/actionTypes";
+import { DOG_API_CALL_FAILURE } from "../constants/actionTypes";
 
-// action types
-const DOG_API_CALL_REQUEST = "DOG_API_CALL_REQUEST";
-const DOG_API_CALL_SUCCESS = "DOG_API_CALL_SUCCESS";
-const DOG_API_CALL_FAILURE = "DOG_API_CALL_FAILURE";
-
-const CAT_API_CALL_REQUEST = "CAT_API_CALL_REQUEST";
-const CAT_API_CALL_SUCCESS = "CAT_API_CALL_SUCCESS";
-const CAT_API_CALL_FAILURE = "CAT_API_CALL_FAILURE";
+import { CAT_API_CALL_REQUEST } from "../constants/actionTypes";
+import { CAT_API_CALL_SUCCESS } from "../constants/actionTypes";
+import { CAT_API_CALL_FAILURE } from "../constants/actionTypes";
 
 function dogs(state = { dog: null, error: null, fetching: false }, action) {
   switch (action.type) {
