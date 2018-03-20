@@ -12,7 +12,7 @@ export default function* watcherSaga() {
 function fetchDog() {
   return axios({
     method: "get",
-    url: "https://dog.ceo/api/breed/hound/images/random"
+    url: "/dog/random"
   });
 }
 
@@ -20,7 +20,7 @@ function fetchDog() {
 function fetchCat() {
   return axios({
     method: "get",
-    url: "https://dog.ceo/api/breed/poodle/images/random"
+    url: "/cat/random"
   });
 }
 
