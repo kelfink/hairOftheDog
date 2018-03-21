@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App_Container from "../feature/App_Container";
 import registerServiceWorker from "./registerServiceWorker";
 
 import { createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { Provider } from "react-redux";
+
+import App_Container from "../feature/App_Container";
 import "../feature/styles/index.css";
 import reducer from "../feature/reducer";
 import watcherSaga from "../feature/sagas";
