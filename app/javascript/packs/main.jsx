@@ -8,7 +8,7 @@ import createSagaMiddleware from "redux-saga";
 import { Provider } from "react-redux";
 import "../feature/styles/index.css";
 import reducer from "../feature/reducer";
-import watcherSaga from "../feature/sagas/sagas";
+import watcherSaga from "../feature/sagas";
 
 console.log("reduce ", reducer);
 // create the saga middleware
