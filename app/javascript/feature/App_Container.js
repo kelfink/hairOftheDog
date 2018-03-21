@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import logo from "../assets/logo.svg";
-import "../styles/App.css";
-import App from "../components/App";
+import logo from "./assets/logo.svg";
+import "./styles/App.css";
+import App from "./components/App";
 
 import { connect } from "react-redux";
 

@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import * as actionTypes from "../constants/actionTypes";
+import * as actionTypes from "./actionTypes";
 
 function dogs(state = { dog: null, error: null, fetching: false }, action) {
   switch (action.type) {
@@ -13,7 +13,7 @@ function dogs(state = { dog: null, error: null, fetching: false }, action) {
       return { ...state, fetching: false, dog: null, error: action.error };
       break;
     case actionTypes.CAT_API_CALL_SUCCESS:
-      return { ...state, fetching: false, dog: null, error:  null };
+      return { ...state, fetching: false, dog: null, error: null };
     default:
       return state;
   }
@@ -30,8 +30,8 @@ function cats(state = { cat: null, error: null, fetching: false }, action) {
     case actionTypes.CAT_API_CALL_FAILURE:
       return { ...state, fetching: false, cat: null, error: action.error };
       break;
-      case actionTypes.DOG_API_CALL_SUCCESS:
-      return { ...state, fetching: false, cat: null, error:  null };
+    case actionTypes.DOG_API_CALL_SUCCESS:
+      return { ...state, fetching: false, cat: null, error: null };
     default:
       return state;
   }
