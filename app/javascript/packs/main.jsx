@@ -1,16 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "../styles/index.css";
-import App_Container from "../containers/App_Container";
 import registerServiceWorker from "./registerServiceWorker";
 
 import { createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { Provider } from "react-redux";
 
-import reducer from "../reducers/index";
-
-import watcherSaga from "../sagas/sagas";
+import App_Container from "../feature/App_Container";
+import "../feature/styles/index.css";
+import reducer from "../feature/reducer";
+import watcherSaga from "../feature/sagas";
 
 console.log("reduce ", reducer);
 // create the saga middleware
